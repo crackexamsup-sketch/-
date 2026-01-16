@@ -18,11 +18,17 @@ const Guestbook: React.FC<GuestbookProps> = ({ messages }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* 
+        Changed from Grid to Columns (Masonry layout). 
+        'columns-1 md:columns-2 lg:columns-3' creates the waterfall effect.
+        'gap-6' creates horizontal space between columns.
+      */}
+      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 md:space-y-0">
         {messages.map((msg) => (
           <div 
             key={msg.id} 
-            className={`group p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-warm-200 ${msg.color} animate-fade-in-up`}
+            /* 'break-inside-avoid' prevents the card from being split across columns. 'mb-6' adds vertical spacing. */
+            className={`break-inside-avoid mb-6 inline-block w-full group p-6 md:p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-warm-200 ${msg.color} animate-fade-in-up`}
           >
             {/* Quote Icon */}
             <div className="flex justify-between items-start mb-4">
