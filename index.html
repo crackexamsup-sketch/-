@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사랑하는 할머니의 80번째 생신</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Gowun Batang"', 'serif'],
+              sans: ['"Gowun Dodum"', 'sans-serif'],
+            },
+            colors: {
+              warm: {
+                50: '#FDFBF7', // Cream
+                100: '#F7F1E3',
+                200: '#EBE0C7',
+                300: '#DFCFA9',
+                900: '#5C4B35', // Deep Brown Text
+              },
+              blossom: {
+                light: '#FFECEC',
+                pink: '#FFB7B2',
+                deep: '#FF6961'
+              },
+              gold: {
+                DEFAULT: '#D4AF37',
+                light: '#F4E5B2'
+              }
+            },
+            animation: {
+              'float-slow': 'float 8s ease-in-out infinite',
+              'fade-in-up': 'fadeInUp 1.5s ease-out forwards',
+              'sway': 'sway 3s ease-in-out infinite alternate',
+              'scroll-down': 'scrollDown 40s linear infinite',
+              'scroll-down-fast': 'scrollDown 25s linear infinite',
+              'scroll-down-slow': 'scrollDown 50s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              sway: {
+                '0%': { transform: 'rotate(-2deg)' },
+                '100%': { transform: 'rotate(2deg)' },
+              },
+              scrollDown: {
+                '0%': { transform: 'translateY(-50%)' },
+                '100%': { transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FDFBF7;
+        color: #5C4B35;
+        overflow-x: hidden;
+      }
+      .paper-texture {
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      }
+      .elegant-card {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        box-shadow: 0 10px 40px -10px rgba(92, 75, 53, 0.1);
+        backdrop-filter: blur(8px);
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
